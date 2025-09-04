@@ -12,7 +12,7 @@ export default function MembersPage() {
   if (loading) {
     return (
       <div className="container max-w-4xl py-16 md:py-24 text-center">
-        <p>Loading...</p>
+        <p>Carregando...</p>
       </div>
     );
   }
@@ -21,7 +21,7 @@ export default function MembersPage() {
     return (
       <div className="container max-w-4xl py-16 md:py-24">
         <div className="text-center">
-            <Image src="https://picsum.photos/800/400" width={800} height={400} alt="Motorcycles parked" className="mx-auto rounded-lg mb-8" data-ai-hint="motorcycles parked" />
+            <Image src="https://picsum.photos/800/400" width={800} height={400} alt="Motos estacionadas" className="mx-auto rounded-lg mb-8" data-ai-hint="motorcycles parked" />
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
             Área Exclusiva para Membros
           </h1>

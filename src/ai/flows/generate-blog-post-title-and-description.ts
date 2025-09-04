@@ -11,14 +11,14 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GenerateBlogPostTitleAndDescriptionInputSchema = z.object({
-  topic: z.string().describe('The topic of the blog post.'),
-  keywords: z.string().describe('Relevant keywords for the blog post, separated by commas.'),
+  topic: z.string().describe('O tópico da postagem do blog.'),
+  keywords: z.string().describe('Palavras-chave relevantes para a postagem do blog, separadas por vírgulas.'),
 });
 export type GenerateBlogPostTitleAndDescriptionInput = z.infer<typeof GenerateBlogPostTitleAndDescriptionInputSchema>;
 
 const GenerateBlogPostTitleAndDescriptionOutputSchema = z.object({
-  title: z.string().describe('An engaging title for the blog post.'),
-  description: z.string().describe('A compelling description for the blog post.'),
+  title: z.string().describe('Um título envolvente para a postagem do blog.'),
+  description: z.string().describe('Uma descrição atraente para a postagem do blog.'),
 });
 export type GenerateBlogPostTitleAndDescriptionOutput = z.infer<typeof GenerateBlogPostTitleAndDescriptionOutputSchema>;
 
@@ -30,13 +30,13 @@ const prompt = ai.definePrompt({
   name: 'generateBlogPostTitleAndDescriptionPrompt',
   input: {schema: GenerateBlogPostTitleAndDescriptionInputSchema},
   output: {schema: GenerateBlogPostTitleAndDescriptionOutputSchema},
-  prompt: `You are a blog post title and description generator for a motorcycle club. Generate a title and description for a blog post based on the given topic and keywords.
+  prompt: `Você é um gerador de títulos e descrições de postagens de blog para um clube de motociclistas. Gere um título e uma descrição para uma postagem de blog com base no tópico e nas palavras-chave fornecidas.
 
-Topic: {{{topic}}}
-Keywords: {{{keywords}}}
+Tópico: {{{topic}}}
+Palavras-chave: {{{keywords}}}
 
-Title:
-Description: `,
+Título:
+Descrição: `,
 });
 
 const generateBlogPostTitleAndDescriptionFlow = ai.defineFlow(

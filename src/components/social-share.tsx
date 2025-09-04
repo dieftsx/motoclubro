@@ -24,8 +24,8 @@ export default function SocialShare({ post }: SocialShareProps) {
     if (!url) return;
     navigator.clipboard.writeText(url).then(() => {
       toast({
-        title: "Copied to clipboard!",
-        description: "You can now share the link.",
+        title: "Copiado para a área de transferência!",
+        description: "Agora você pode compartilhar o link.",
       });
     });
   };
@@ -41,7 +41,7 @@ export default function SocialShare({ post }: SocialShareProps) {
     );
   }
   
-  const text = `Check out this post: ${post.title}`;
+  const text = `Confira esta postagem: ${post.title}`;
 
   const socialLinks = [
     {
@@ -65,12 +65,12 @@ export default function SocialShare({ post }: SocialShareProps) {
     <div className="flex items-center gap-2">
       {socialLinks.map(({ name, Icon, href }) => (
         <Button key={name} variant="outline" size="icon" asChild>
-          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Share on ${name}`}>
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Compartilhar no ${name}`}>
             <Icon className="h-5 w-5" />
           </a>
         </Button>
       ))}
-      <Button variant="outline" size="icon" onClick={copyToClipboard} aria-label="Copy link">
+      <Button variant="outline" size="icon" onClick={copyToClipboard} aria-label="Copiar link">
         <Copy className="h-5 w-5" />
       </Button>
     </div>

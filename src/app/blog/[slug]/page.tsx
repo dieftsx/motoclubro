@@ -62,7 +62,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex items-center gap-2">
                     <CalendarDays className="h-4 w-4" />
                     <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </time>
                 </div>
             </div>
@@ -83,7 +83,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             
             <div className="mt-12 border-t pt-8">
-                <h3 className="text-lg font-semibold mb-4">Share this post</h3>
+                <h3 className="text-lg font-semibold mb-4">Compartilhe esta postagem</h3>
                 <SocialShare post={{ title: post.title, slug: post.slug }} />
             </div>
         </div>

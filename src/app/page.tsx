@@ -10,11 +10,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
+      {/* Seção Hero */}
       <section className="relative h-[70vh] min-h-[500px] w-full">
         <Image
           src="https://picsum.photos/1920/1080?random=10"
-          alt="A group of motorcycles on a scenic road"
+          alt="Um grupo de motocicletas em uma estrada cênica"
           data-ai-hint="motorcycles scenic road"
           fill
           className="object-cover"
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Seção de Funcionalidades */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recent Posts Section */}
+      {/* Seção de Postagens Recentes */}
       <section className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-center">
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* Seção Sobre Nós */}
       <section className="bg-muted/50 py-16 md:py-24">
         <div className="container grid items-center gap-8 md:grid-cols-2 lg:gap-16">
           <div className="space-y-4">
@@ -84,7 +84,7 @@ export default function Home() {
               Mais que um Clube, Somos uma Família
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              MotoBlog Central não é apenas sobre motocicletas; é sobre o vínculo que compartilhamos. Somos um grupo diversificado de pilotos unidos pelo amor pela estrada aberta, aventura e o rugido inconfundível de um motor. De passeios de fim de semana a eventos de caridade, pilotamos juntos e nos apoiamos.
+              O MotoBlog Central não é apenas sobre motocicletas; é sobre o vínculo que compartilhamos. Somos um grupo diversificado de pilotos unidos pelo amor pela estrada aberta, aventura e o rugido inconfundível de um motor. De passeios de fim de semana a eventos de caridade, pilotamos juntos e nos apoiamos.
             </p>
             <Button asChild variant="link" className="text-accent p-0 h-auto">
               <Link href="#">

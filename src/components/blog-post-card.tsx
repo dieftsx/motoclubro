@@ -41,7 +41,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           </Avatar>
           <div className="text-xs">
             <p className="font-semibold text-foreground">{post.author.name}</p>
-            <p className="text-muted-foreground">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p className="text-muted-foreground">{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           </div>
         </CardFooter>
       </Card>

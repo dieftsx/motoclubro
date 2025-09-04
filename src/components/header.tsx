@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Bike, Menu, LogIn, LogOut, User } from 'lucide-react';
+import { Bike, Menu, LogIn, LogOut, User, ShieldPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/useAuth';
@@ -9,9 +9,9 @@ import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
+  { href: '/', label: 'Início' },
   { href: '/blog', label: 'Blog' },
-  { href: '/members', label: 'Members Area' },
+  { href: '/members', label: 'Área de Membros' },
 ];
 
 export default function Header() {
@@ -47,7 +47,7 @@ export default function Header() {
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                       <Avatar className="h-8 w-8">
-                        <AvatarImage src={user.photoURL ?? ''} alt={user.displayName ?? 'User'} />
+                        <AvatarImage src={user.photoURL ?? ''} alt={user.displayName ?? 'Usuário'} />
                         <AvatarFallback><User /></AvatarFallback>
                       </Avatar>
                     </Button>
@@ -62,9 +62,16 @@ export default function Header() {
                       </div>
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
+                     <DropdownMenuItem asChild>
+                      <Link href="/admin/create">
+                        <ShieldPlus className="mr-2 h-4 w-4" />
+                        <span>Criar Postagem</span>
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={logout}>
                       <LogOut className="mr-2 h-4 w-4" />
-                      <span>Log out</span>
+                      <span>Sair</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -81,7 +88,7 @@ export default function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">Abrir Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
@@ -103,7 +110,7 @@ export default function Header() {
                     href="/admin/create"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    Create Post
+                    Criar Postagem
                   </Link>
               </nav>
             </SheetContent>

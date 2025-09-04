@@ -12,7 +12,7 @@ const allCategories = getCategories();
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Todos');
 
   const filteredPosts = useMemo(() => {
     return blogPosts.filter((post: BlogPost) => {
@@ -20,7 +20,7 @@ export default function BlogPage() {
                             post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'Todos' || post.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     });
@@ -30,10 +30,10 @@ export default function BlogPage() {
     <div className="container py-16 md:py-24">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline">
-          Our Adventures
+          Nossas Aventuras
         </h1>
         <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-lg">
-          Stories from the road, club news, and tech tips. All in one place.
+          Histórias da estrada, notícias do clube e dicas de tecnologia. Tudo em um só lugar.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function BlogPage() {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           <Input
             type="search"
-            placeholder="Search posts..."
+            placeholder="Buscar postagens..."
             className="pl-10"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -51,7 +51,7 @@ export default function BlogPage() {
         <div className="md:w-1/3 lg:w-1/4">
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
             <SelectTrigger>
-              <SelectValue placeholder="Filter by category" />
+              <SelectValue placeholder="Filtrar por categoria" />
             </SelectTrigger>
             <SelectContent>
               {allCategories.map(category => (
@@ -70,8 +70,8 @@ export default function BlogPage() {
         </div>
       ) : (
         <div className="text-center py-16">
-          <h3 className="text-2xl font-semibold">No posts found</h3>
-          <p className="text-muted-foreground mt-2">Try adjusting your search or filter.</p>
+          <h3 className="text-2xl font-semibold">Nenhuma postagem encontrada</h3>
+          <p className="text-muted-foreground mt-2">Tente ajustar sua busca ou filtro.</p>
         </div>
       )}
     </div>

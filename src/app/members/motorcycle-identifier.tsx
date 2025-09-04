@@ -23,11 +23,11 @@ export default function MotorcycleIdentifier() {
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.size > 4 * 1024 * 1024) { // 4MB limit
+      if (file.size > 4 * 1024 * 1024) { // Limite de 4MB
         toast({
           variant: 'destructive',
-          title: 'File too large',
-          description: 'Please upload an image smaller than 4MB.',
+          title: 'Arquivo muito grande',
+          description: 'Por favor, envie uma imagem menor que 4MB.',
         });
         return;
       }
@@ -47,8 +47,8 @@ export default function MotorcycleIdentifier() {
     if (!imageData) {
       toast({
         variant: 'destructive',
-        title: 'No image selected',
-        description: 'Please upload an image of your motorcycle.',
+        title: 'Nenhuma imagem selecionada',
+        description: 'Por favor, envie uma imagem da sua motocicleta.',
       });
       return;
     }
@@ -62,11 +62,11 @@ export default function MotorcycleIdentifier() {
       setIdentification(result);
     } catch (err) {
       console.error(err);
-      setError('Failed to identify motorcycle. The AI model might be unavailable. Please try again later.');
+      setError('Falha ao identificar a motocicleta. O modelo de IA pode estar indisponível. Por favor, tente novamente mais tarde.');
       toast({
         variant: 'destructive',
-        title: 'Identification Failed',
-        description: 'There was an error identifying the motorcycle.',
+        title: 'Falha na Identificação',
+        description: 'Houve um erro ao identificar a motocicleta.',
       });
     } finally {
       setIsIdentifying(false);
@@ -112,7 +112,7 @@ export default function MotorcycleIdentifier() {
                 <div className="flex flex-col items-center justify-center border-2 border-dashed border-muted-foreground/30 rounded-lg p-12 text-center hover:bg-muted/50 transition-colors">
                     <Upload className="h-10 w-10 text-muted-foreground mb-2" />
                     <span className="font-semibold text-foreground">Clique para fazer upload de uma imagem</span>
-                    <span className="text-sm text-muted-foreground">PNG, JPG, ou WEBP (Max 4MB)</span>
+                    <span className="text-sm text-muted-foreground">PNG, JPG, ou WEBP (Máx 4MB)</span>
                 </div>
             )}
           </label>
