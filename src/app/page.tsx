@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/data';
 import BlogPostCard from '@/components/blog-post-card';
-import { ArrowRight, Motorcycle, Users, Wrench } from 'lucide-react';
+import { ArrowRight, Bike, Users, Wrench } from 'lucide-react';
 
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 3);
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
-              <Motorcycle className="h-12 w-12 text-primary mb-4"/>
+              <Bike className="h-12 w-12 text-primary mb-4"/>
               <h3 className="text-2xl font-bold font-headline mb-2">Identifique sua Moto</h3>
               <p className="text-muted-foreground">Faça upload de uma foto e nossa IA identificará o modelo, marca e ano da sua motocicleta.</p>
             </div>

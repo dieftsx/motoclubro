@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { LoaderCircle, Motorcycle, Upload, X } from 'lucide-react';
+import { LoaderCircle, Bike, Upload, X } from 'lucide-react';
 import { identifyMotorcycle, IdentifyMotorcycleOutput } from '@/ai/flows/identify-motorcycle';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
@@ -87,7 +87,7 @@ export default function MotorcycleIdentifier() {
     <Card>
       <CardHeader>
         <CardTitle className="text-2xl font-headline flex items-center gap-2">
-          <Motorcycle className="h-6 w-6" />
+          <Bike className="h-6 w-6" />
           Identificador de Motocicleta por IA
         </CardTitle>
         <CardDescription>
