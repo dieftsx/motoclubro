@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import SocialShare from '@/components/social-share';
 import { CalendarDays, UserCircle } from 'lucide-react';
+import { formatAsUTCDate } from '@/lib/utils';
 
 type BlogPostPageProps = {
   params: {
@@ -62,7 +63,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex items-center gap-2">
                     <CalendarDays className="h-4 w-4" />
                     <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {formatAsUTCDate(post.date)}
                     </time>
                 </div>
             </div>

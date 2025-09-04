@@ -4,6 +4,7 @@ import type { BlogPost } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { formatAsUTCDate } from '@/lib/utils';
 
 interface BlogPostCardProps {
   post: BlogPost;
@@ -41,7 +42,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           </Avatar>
           <div className="text-xs">
             <p className="font-semibold text-foreground">{post.author.name}</p>
-            <p className="text-muted-foreground">{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p className="text-muted-foreground">{formatAsUTCDate(post.date)}</p>
           </div>
         </CardFooter>
       </Card>
