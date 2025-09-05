@@ -81,18 +81,20 @@ export default function Home() {
       {/* Seção Sobre Nós */}
       <section className="bg-muted/50 py-16 md:py-24">
         <div className="container grid items-center gap-8 md:grid-cols-2 lg:gap-16">
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
               Mais que um Clube, Somos uma Família
             </h2>
             <p className="text-muted-foreground md:text-lg">
              O MotoClube RO não é apenas sobre motocicletas; é sobre o vínculo que compartilhamos. Somos um grupo diversificado de pilotos unidos pelo amor pela estrada aberta, aventura e o rugido inconfundível de um motor. De passeios de fim de semana a eventos de caridade, pilotamos juntos e nos apoiamos.
             </p>
-            <Button asChild variant="link" className="text-accent p-0 h-auto">
-              <Link href="#">
-                Saiba Mais Sobre Nós <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="flex justify-center md:justify-start">
+              <Button asChild variant="link" className="text-accent p-0 h-auto">
+                <Link href="#">
+                  Saiba Mais Sobre Nós <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
           <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
              <Image
