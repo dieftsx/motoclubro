@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/data';
 import BlogPostCard from '@/components/blog-post-card';
 import { ArrowRight, Bike, Users, Wrench } from 'lucide-react';
+import fotoamigos from '../../public/amigosclub.jpg';
+import motoclubheader from '../../public/fotoheader.jpg';
 
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 3);
@@ -13,7 +15,7 @@ export default function Home() {
       {/* Seção Hero */}
       <section className="relative h-[70vh] min-h-[500px] w-full">
         <Image
-          src="https://picsum.photos/1920/1080?random=10"
+          src={motoclubheader}
           alt="Um grupo de motocicletas em uma estrada cênica"
           data-ai-hint="motorcycles scenic road"
           fill
@@ -23,7 +25,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
           <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
-            MotoBlog Central
+          MotoClube RO
           </h1>
           <p className="mt-4 max-w-[800px] text-lg md:text-xl text-neutral-200">
             A comunidade definitiva para entusiastas de motocicletas. Compartilhe suas aventuras, conecte-se com outros pilotos e mergulhe no mundo das duas rodas.
@@ -84,7 +86,7 @@ export default function Home() {
               Mais que um Clube, Somos uma Família
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              O MotoBlog Central não é apenas sobre motocicletas; é sobre o vínculo que compartilhamos. Somos um grupo diversificado de pilotos unidos pelo amor pela estrada aberta, aventura e o rugido inconfundível de um motor. De passeios de fim de semana a eventos de caridade, pilotamos juntos e nos apoiamos.
+             O MotoClube RO não é apenas sobre motocicletas; é sobre o vínculo que compartilhamos. Somos um grupo diversificado de pilotos unidos pelo amor pela estrada aberta, aventura e o rugido inconfundível de um motor. De passeios de fim de semana a eventos de caridade, pilotamos juntos e nos apoiamos.
             </p>
             <Button asChild variant="link" className="text-accent p-0 h-auto">
               <Link href="#">
@@ -94,7 +96,7 @@ export default function Home() {
           </div>
           <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
              <Image
-                src="https://picsum.photos/800/600"
+                src={fotoamigos}
                 alt="Membros do motoclube juntos"
                 data-ai-hint="motorcycle club"
                 fill

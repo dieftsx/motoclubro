@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
 import MotorcycleIdentifier from "./motorcycle-identifier";
 import Image from "next/image";
+import fotoamigos from '../../../public/amigosclub.jpg';
 
 export default function MembersPage() {
   const { user, loading, signInWithGoogle } = useAuth();
@@ -21,7 +22,7 @@ export default function MembersPage() {
     return (
       <div className="container max-w-4xl py-16 md:py-24">
         <div className="text-center">
-            <Image src="https://picsum.photos/800/400" width={800} height={400} alt="Motos estacionadas" className="mx-auto rounded-lg mb-8" data-ai-hint="motorcycles parked" />
+            <Image src={fotoamigos} width={800} height={400} alt="Motos estacionadas" className="mx-auto rounded-lg mb-8" data-ai-hint="motorcycles parked" />
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
             Área Exclusiva para Membros
           </h1>

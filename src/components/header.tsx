@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Bike className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block font-headline">
-              MotoBlog Central
+               MotoClube RO
             </span>
           </Link>
           <nav className="hidden gap-6 md:flex">
@@ -95,7 +95,7 @@ export default function Header() {
               <nav className="flex flex-col gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
                   <Bike className="h-6 w-6 text-primary" />
-                  <span>MotoBlog Central</span>
+                  <span>MotoClube RO</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link

@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from '@/hooks/useAuth';
 
 export const metadata: Metadata = {
-  title: 'MotoBlog Central',
+  title: 'MotoClube RO',
   description: 'Seu hub central para aventuras de motocicleta.',
 };
 
